@@ -40,14 +40,6 @@
  leaving that decision up to the user.
  */
 
-// Delicious - https://developer.apps.yahoo.com/dashboard/createKey.html
-- (NSString*)deliciousConsumerKey {
-	return @"";
-}
-
-- (NSString*)deliciousSecretKey {
-	return @"";
-}
 // Facebook - https://developers.facebook.com/apps
 // SHKFacebookAppID is the Application ID provided by Facebook
 // SHKFacebookLocalAppID is used if you need to differentiate between several iOS apps running against a single Facebook app. Useful, if you have full and lite versions of the same app,
@@ -137,11 +129,11 @@
  2 - One needs to setup the flickr app as a "web service" on the flickr authentication flow settings, and enter in your app's custom callback URL scheme. 
  3 - make sure you define and create the same URL scheme in your apps info.plist. It can be as simple as yourapp://flickr */
 - (NSString*)flickrConsumerKey {
-    return @"";
+    return @"72f05286417fae8da2d7e779f0eb1b2a";
 }
 
 - (NSString*)flickrSecretKey {
-    return @"";
+    return @"b5e731f395031782";
 }
 // The user defined callback url
 - (NSString*)flickrCallbackUrl{
