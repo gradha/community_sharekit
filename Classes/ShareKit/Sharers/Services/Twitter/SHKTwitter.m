@@ -30,7 +30,7 @@
 
 #import "SHKConfiguration.h"
 #import "SHKTwitter.h"
-#import "JSONKit.h"
+//#import "global/JSONKit.h"
 #import "SHKiOS5Twitter.h"
 
 static NSString *const kSHKTwitterUserInfo=@"kSHKTwitterUserInfo";
@@ -464,8 +464,8 @@ static NSString *const kSHKTwitterUserInfo=@"kSHKTwitterUserInfo";
         if (serializator) {
             userInfo = [serializator JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
         } else {
-            userInfo = [[JSONDecoder decoder] mutableObjectWithData:data error:&error];
-        }    
+            error = [NSError errorWithDomain:NSPOSIXErrorDomain code:0 userInfo:nil];
+        }
         
         if (error) {
             SHKLog(@"Error when parsing json twitter user info request:%@", [error description]);
